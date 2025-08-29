@@ -16,12 +16,12 @@ function checkPassword() {
 // ----------------- loading.html -----------------
 if (window.location.pathname.endsWith('loading.html')) {
   setTimeout(() => {
-    window.location.href = "surpriz.html";
+    window.location.href = "supriz.html";
   }, 3000); // 3 saniye sonra yönlendir
 }
 
 // ----------------- surpriz.html -----------------
-if (window.location.pathname.endsWith('surpriz.html')) {
+if (window.location.pathname.endsWith('supriz.html')) {
   let images = ["images/1.jpg", "images/2.jpg", "images/3.jpg"];
   let sozler = [
     "Sen benim en güzel tesadüfümsün 🌸",
