@@ -9,6 +9,20 @@ body {
   height: 100vh; /* Bu ayarın olduğundan emin olun */
 }
 
+/* Yükleme ekranı konteyneri */
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  /* Bu kısım ortalama için eklendi */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* Şifre ekranı ve loader */
 .box {
   background: white;
