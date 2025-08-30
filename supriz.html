@@ -2,37 +2,56 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>❤️ Sürprizim ❤️</title>
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Yıldız ve kalp animasyonu için container -->
+
+  <!-- Efektlerin yükleneceği yer -->
   <div id="effects"></div>
 
+  <!-- Ana İçerik -->
   <div class="container">
-  <!-- Sol taraf -->
-  <div class="side left">
-    <img src="images/images1.jpg" alt="Foto 1">
-    <img src="images/images2.jpg" alt="Foto 2">
-    <img src="images/images3.jpg" alt="Foto 3">
+    <div class="side left">
+      <img src="images/photo1.jpg" alt="Fotoğraf 1">
+      <img src="images/photo2.jpg" alt="Fotoğraf 2">
+      <img src="images/photo3.jpg" alt="Fotoğraf 3">
+    </div>
+    
+    <div class="center">
+      <!-- Yeni doğum günü başlık bölümü -->
+      <div class="top-section">
+        <div class="birthday-card">
+          <h1>Doğum Günün Kutlu Olsun</h1>
+          <p>Hayatımın Anlamı ❤️</p>
+        </div>
+        <img class="cake-image" src="images/cake.png" alt="Doğum günü pastası">
+      </div>
+      
+      <div class="main-content">
+        <div class="center-message" id="sozler">
+          Yıldızlar kayar, zaman geçer... ama sen hep kalbimdesin 💫
+        </div>
+        <img id="main-photo" src="images/ana_foto.jpg" alt="Ana Fotoğraf">
+      </div>
+    </div>
+    
+    <div class="side right">
+      <img src="images/photo4.jpg" alt="Fotoğraf 4">
+      <img src="images/photo5.jpg" alt="Fotoğraf 5">
+      <img src="images/photo6.jpg" alt="Fotoğraf 6">
+    </div>
   </div>
 
-  <!-- Orta yazı alanı -->
-  <div class="center">
-    <h1>❤️ Sen Benim En Güzel Hikayemsin ❤️</h1>
-    <p id="sozler">Yıldızlar kayar, zaman geçer... ama sen hep kalbimdesin 💫</p>
+  <!-- Dede fotoğrafı konteyneri -->
+  <div class="special-photo-container">
+    <img src="images/dede_foto.jpg" alt="Dede ve ben">
+    <p>"Yokluğun zor, varlığın tarifsiz.. İyi ki hayatıma dokundun dedem, mekanın cennet olsun."</p>
   </div>
-
-  <!-- Sağ taraf -->
-  <div class="side right">
-    <img src="images/images4.jpg" alt="Foto 4">
-    <img src="images/images5.jpg" alt="Foto 5">
-    <img src="images/images6.jpg" alt="Foto 6">
-  </div>
-</div>
-
-
+  
   <script src="supriz.js"></script>
+
 </body>
 </html>

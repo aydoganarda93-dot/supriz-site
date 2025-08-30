@@ -195,3 +195,40 @@ button:hover {
   max-width: 600px;
   line-height: 1.5;
 }
+
+/* Yeni doğum günü kartı stili */
+.birthday-card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.birthday-card h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 40px;
+  color: #ff3366;
+}
+
+.birthday-card p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 20px;
+  color: #444;
+}
+
+/* Pasta görseli */
+.cake-image {
+  width: 150px;
+  height: auto;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
