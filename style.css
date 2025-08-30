@@ -14,7 +14,7 @@ body {
   background: white;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   text-align: center;
 }
 input {
@@ -33,7 +33,10 @@ button {
   border-radius: 10px;
   cursor: pointer;
 }
-button:hover { background: #ff1a8c; transform: scale(1.1); }
+button:hover {
+  background: #ff1a8c;
+  transform: scale(1.1);
+}
 
 .loader {
   border: 8px solid #f3f3f3;
@@ -44,38 +47,22 @@ button:hover { background: #ff1a8c; transform: scale(1.1); }
   animation: spin 1.5s linear infinite;
   margin-bottom: 20px;
 }
-@keyframes spin { 0% { transform: rotate(0deg);} 100% { transform: rotate(360deg);} }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
-/* Surpriz sayfa */
+/* Sürpriz sayfa */
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
   margin: 40px;
-}
-.left-photos, .right-photos {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-/* Fotoğraflara polaroid / film karesi efekti */
-.left-photos img, .right-photos img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-  transform: rotate(-2deg);
-  transition: transform 0.5s, box-shadow 0.5s;
-  border: 4px solid white;
-  background: white;
-}
-
-/* Hover efekti */
-.left-photos img:hover, .right-photos img:hover {
-  transform: rotate(0deg) scale(1.1);
-  box-shadow: 0 15px 25px rgba(0,0,0,0.7);
 }
 
 /* Ortadaki mesaj kutusu stilini parlat */
@@ -91,11 +78,15 @@ button:hover { background: #ff1a8c; transform: scale(1.1); }
 }
 
 @keyframes glow {
-  0% { text-shadow: 0 0 5px #fff, 0 0 10px #ff66aa; }
-  100% { text-shadow: 0 0 15px #fff, 0 0 25px #ff3399; }
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ff66aa;
+  }
+  100% {
+    text-shadow: 0 0 15px #fff, 0 0 25px #ff3399;
+  }
 }
 
-/* Yıldız animasyonu (JS ile eklenen) */
+/* Yıldız ve kalp animasyonu (JS ile eklenen) */
 #effects div {
   pointer-events: none;
   user-select: none;
@@ -104,6 +95,7 @@ button:hover { background: #ff1a8c; transform: scale(1.1); }
   text-shadow: 0 0 5px #fff, 0 0 10px #ffccff;
 }
 
+/* Fotoğraflar için polaroid / film karesi efekti */
 .side {
   display: flex;
   flex-direction: column;
@@ -114,16 +106,20 @@ button:hover { background: #ff1a8c; transform: scale(1.1); }
   width: 180px;
   height: auto;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   transform: rotate(-5deg);
   transition: transform 0.3s ease;
+  border: 4px solid white; /* Polaroid çerçeve efekti için */
+  background: white;
 }
 .side.right img {
   transform: rotate(5deg);
 }
 
+/* Hover efekti */
 .side img:hover {
   transform: scale(1.05) rotate(0deg);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
 }
 
 /* Ortadaki yazı */
@@ -137,7 +133,6 @@ button:hover { background: #ff1a8c; transform: scale(1.1); }
   color: #ff3366;
   margin-bottom: 20px;
 }
-
 .center p {
   font-size: 20px;
   color: #444;
