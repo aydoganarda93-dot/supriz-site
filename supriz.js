@@ -10,8 +10,8 @@ setInterval(() => {
   sozlerDiv.innerText = messages[index];
 }, 4000);
 
-// Kalp ve yıldız animasyonları için tek fonksiyon
 const effects = document.getElementById("effects");
+
 function createFloatingEffect(symbol, sizeRange, duration) {
   const elem = document.createElement("div");
   elem.innerText = symbol;
@@ -32,11 +32,11 @@ function createFloatingEffect(symbol, sizeRange, duration) {
   }, duration * 1000);
 }
 
-// Animasyonları tek yerden başlat
+// Kalp ve yıldız animasyonlarını başlat
 setInterval(() => createFloatingEffect("❤️", 24, 4), 800);
 setInterval(() => createFloatingEffect("⭐", 18, 5), 1200);
 
-// Gül yaprağı animasyon fonksiyonu
+// Gül yaprağı animasyon fonksiyonu (yeni eklenen)
 function createRosePetal() {
   const petal = document.createElement("div");
   petal.innerText = "🌹";
