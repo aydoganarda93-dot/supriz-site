@@ -7,9 +7,19 @@ body {
   position: relative;
   height: 100vh;
   
-  background: linear-gradient(-45deg, #ff99cc, #ffccff, #ffe0f0, #ffcce6);
+  /* Daha karmaşık bir arka plan animasyonu */
+  background: linear-gradient(135deg, #ffcce6, #ff99cc, #ffd9e6, #ffb3d9, #ffccff);
   background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  animation: dynamicBackground 25s ease infinite;
+}
+
+/* @keyframes ile arka planın hareket etmesini sağlayan animasyon */
+@keyframes dynamicBackground {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 100%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 0%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Tüm ortalama işlemlerini tek bir konteyner ile yapalım */
@@ -68,12 +78,6 @@ button:hover {
   100% {
     transform: rotate(360deg);
   }
-}
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 /* Sürpriz sayfa */
