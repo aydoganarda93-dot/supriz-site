@@ -3,10 +3,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(45deg, #ff99cc, #ffccff);
   overflow-x: hidden;
   position: relative;
   height: 100vh;
+  
+  /* Yeni arka plan animasyonu */
+  background: linear-gradient(-45deg, #ff99cc, #ffccff, #ffe0f0, #ffcce6);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
 }
 
 /* Tüm ortalama işlemlerini tek bir konteyner ile yapalım */
@@ -65,6 +69,12 @@ button:hover {
   100% {
     transform: rotate(360deg);
   }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Sürpriz sayfa */
@@ -134,14 +144,16 @@ button:hover {
 .center {
   flex: 1;
   text-align: center;
-  font-family: 'Segoe UI', sans-serif;
+  /* Daha önce vardı, değiştirmeye gerek yok */
 }
 .center h1 {
-  font-size: 28px;
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
   color: #ff3366;
   margin-bottom: 20px;
 }
 .center p {
-  font-size: 20px;
+  font-family: 'Dancing Script', cursive;
+  font-size: 24px;
   color: #444;
 }

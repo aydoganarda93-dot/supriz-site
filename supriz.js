@@ -35,3 +35,30 @@ function createFloatingEffect(symbol, sizeRange, duration) {
 // Animasyonları tek yerden başlat
 setInterval(() => createFloatingEffect("❤️", 24, 4), 800);
 setInterval(() => createFloatingEffect("⭐", 18, 5), 1200);
+
+// Gül yaprağı animasyon fonksiyonu
+function createRosePetal() {
+  const petal = document.createElement("div");
+  petal.innerText = "🌹";
+  petal.style.position = "absolute";
+  petal.style.fontSize = (Math.random() * 20 + 15) + "px";
+  petal.style.left = Math.random() * window.innerWidth + "px";
+  petal.style.top = "-20px";
+  petal.style.opacity = 0.8;
+  petal.style.transform = `rotate(${Math.random() * 360}deg)`;
+  petal.style.transition = "all " + (Math.random() * 5 + 7) + "s linear";
+  effects.appendChild(petal);
+
+  setTimeout(() => {
+    petal.style.top = window.innerHeight + "px";
+    petal.style.left = parseFloat(petal.style.left) + (Math.random() * 200 - 100) + "px";
+    petal.style.opacity = 0;
+  }, 100);
+
+  setTimeout(() => {
+    effects.removeChild(petal);
+  }, 8000);
+}
+
+// Her 1.5 saniyede bir gül yaprağı oluştur
+setInterval(createRosePetal, 1500);
