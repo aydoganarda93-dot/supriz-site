@@ -6,16 +6,51 @@ body {
   overflow-x: hidden;
   position: relative;
   height: 100vh;
-  background: linear-gradient(-45deg, #ff99cc, #ffccff, #ffe0f0, #ffcce6);
-  background-size: 400% 400%;
-  animation: gradientBG 15s ease infinite;
+  
+  /* Yeni romantik gece manzarası */
+  background: #0d1226; /* Koyu mavi-mor arka plan */
+  overflow: hidden; /* Yıldızların taşmasını engelle */
 }
 
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Yıldız animasyonu */
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  animation: starsMove 60s linear infinite;
 }
+
+.stars::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.5;
+  animation: starsMoveAfter 60s linear infinite;
+}
+
+@keyframes starsMove {
+  from { background-position: 0 0; }
+  to { background-position: 100% 100%; }
+}
+
+@keyframes starsMoveAfter {
+  from { background-position: 100% 100%; }
+  to { background-position: 0 0; }
+}
+
+/* Diğer tüm CSS kodları aynı kalacak */
+/* ... */
+
+/* Diğer tüm CSS kodları burada devam eder... */
 
 /* Tüm ortalama işlemlerini tek bir konteyner ile yapalım */
 .center-container {
@@ -94,11 +129,11 @@ button:hover {
 }
 
 .birthday-card {
-  padding: 40px; /* Padding'i büyüttüm */
-  background-color: rgba(255, 255, 255, 0.85); /* Opaklığı artırdım */
-  border-radius: 20px; /* Köşeleri yuvarladım */
-  backdrop-filter: blur(8px); /* Bulanıklığı artırdım */
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Gölgeyi belirginleştirdim */
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   margin-bottom: 20px;
   animation: fadeInDown 1.5s ease-in-out;
 }
@@ -116,16 +151,16 @@ button:hover {
 
 .birthday-card h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: 6rem; /* Font büyüklüğünü artırdım */
+  font-size: 6rem;
   color: #ff3366;
-  text-shadow: 3px 3px 5px rgba(0,0,0,0.15); /* Gölgeyi belirginleştirdim */
+  text-shadow: 3px 3px 5px rgba(0,0,0,0.15);
   margin-top: 0;
   margin-bottom: 10px;
 }
 
 .birthday-card p {
   font-family: 'Dancing Script', cursive;
-  font-size: 3rem; /* Font büyüklüğünü artırdım */
+  font-size: 3rem;
   color: #444;
   margin-top: 0;
   margin-bottom: 0;
