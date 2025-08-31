@@ -7,6 +7,7 @@ body {
   position: relative;
   min-height: 100vh;
   background: #0d1226; /* Koyu mavi-mor arka plan */
+  color: #ffffff; /* Tüm sayfa yazıları için beyaz renk */
 }
 
 /* Yıldız animasyonu */
@@ -82,6 +83,7 @@ body {
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   text-align: center;
+  color: #000000; /* Şifre ekranındaki yazılar için siyah renk */
 }
 input {
   padding: 10px;
@@ -276,7 +278,7 @@ button:hover {
 /* Hover efekti */
 .side img:hover {
   transform: scale(1.05) rotate(0deg);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
+  box-shadow: 15px 25px rgba(0, 0, 0, 0.7);
 }
 
 /* Ortadaki yazı */
