@@ -163,7 +163,7 @@ button:hover {
 
 /* Ortadaki mesaj kutusu stilini parlat */
 .center-message {
-  margin: 0 50px;
+  margin: 0 auto; /* Bu satırı değiştirdik */
   font-size: 26px;
   font-weight: bold;
   color: #ff1a8c;
