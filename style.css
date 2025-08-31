@@ -5,11 +5,10 @@ body {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
   position: relative;
-  height: 100vh;
+  min-height: 100vh; /* height yerine min-height ile içeriğe göre uzamasını sağladık */
   
   /* Yeni romantik gece manzarası */
   background: #0d1226; /* Koyu mavi-mor arka plan */
-  overflow: hidden; /* Yıldızların taşmasını engelle */
 }
 
 /* Yıldız animasyonu */
@@ -22,6 +21,7 @@ body {
   background-image: radial-gradient(white 1px, transparent 1px);
   background-size: 50px 50px;
   animation: starsMove 60s linear infinite;
+  z-index: -1; /* İçeriğin arkasında kalmasını sağladık */
 }
 
 .stars::after {
@@ -46,9 +46,6 @@ body {
   from { background-position: 100% 100%; }
   to { background-position: 0 0; }
 }
-
-/* Diğer tüm CSS kodları aynı kalacak */
-/* ... */
 
 /* Diğer tüm CSS kodları burada devam eder... */
 
