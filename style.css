@@ -7,18 +7,15 @@ body {
   position: relative;
   height: 100vh;
   
-  /* Daha karmaşık bir arka plan animasyonu */
-  background: linear-gradient(135deg, #ffcce6, #ff99cc, #ffd9e6, #ffb3d9, #ffccff);
+  /* Yeni arka plan animasyonu */
+  background: linear-gradient(-45deg, #ff99cc, #ffccff, #ffe0f0, #ffcce6);
   background-size: 400% 400%;
-  animation: dynamicBackground 25s ease infinite;
+  animation: gradientBG 15s ease infinite;
 }
 
-/* @keyframes ile arka planın hareket etmesini sağlayan animasyon */
-@keyframes dynamicBackground {
+@keyframes gradientBG {
   0% { background-position: 0% 50%; }
-  25% { background-position: 50% 100%; }
   50% { background-position: 100% 50%; }
-  75% { background-position: 50% 0%; }
   100% { background-position: 0% 50%; }
 }
 
@@ -87,6 +84,81 @@ button:hover {
   align-items: center;
   gap: 20px;
   margin: 40px;
+}
+
+/* Doğum Günü başlık kartı */
+.top-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.birthday-card {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.birthday-card h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4rem;
+  color: #ff3366;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.birthday-card p {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #444;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Video ve Buton Konteyneri */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+#birthday-video {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#play-video-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  padding: 15px 30px;
+  background: #ff4da6;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#play-video-button:hover {
+  background: #ff1a8c;
+  transform: translate(-50%, -50%) scale(1.05);
 }
 
 /* Ortadaki mesaj kutusu stilini parlat */
@@ -166,69 +238,32 @@ button:hover {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 60px;
+  margin-top: 60px; /* Üst kısımdan boşluk bırak */
 }
 
 /* Fotoğraf için stil */
 .special-photo-container img {
   width: 300px;
   height: auto;
-  border: 10px solid #fff;
+  border: 10px solid #fff; /* Kalın beyaz çerçeve */
   border-radius: 8px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
-  filter: grayscale(80%);
+  filter: grayscale(80%); /* Hafif eski fotoğraf efekti */
   cursor: pointer;
 }
 
 .special-photo-container img:hover {
   transform: scale(1.05);
-  filter: grayscale(0%);
+  filter: grayscale(0%); /* Fare geldiğinde orijinal rengine dönsün */
 }
 
 /* Söz için stil */
 .special-photo-container p {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Dancing Script', cursive; /* Özel yazı fontu */
   font-size: 24px;
   color: #555;
   margin-top: 20px;
   max-width: 600px;
   line-height: 1.5;
-}
-
-/* Yeni doğum günü kartı stili */
-.birthday-card {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 10px 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
-
-.birthday-card h1 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 40px;
-  color: #ff3366;
-}
-
-.birthday-card p {
-  font-family: 'Dancing Script', cursive;
-  font-size: 20px;
-  color: #444;
-}
-
-/* Pasta görseli */
-.cake-image {
-  width: 150px;
-  height: auto;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
 }
