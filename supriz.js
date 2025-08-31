@@ -10,8 +10,8 @@ setInterval(() => {
   sozlerDiv.innerText = messages[index];
 }, 4000);
 
+// Kalp ve yıldız animasyonları için tek fonksiyon
 const effects = document.getElementById("effects");
-
 function createFloatingEffect(symbol, sizeRange, duration) {
   const elem = document.createElement("div");
   elem.innerText = symbol;
@@ -32,11 +32,11 @@ function createFloatingEffect(symbol, sizeRange, duration) {
   }, duration * 1000);
 }
 
-// Kalp ve yıldız animasyonlarını başlat
+// Animasyonları tek yerden başlat
 setInterval(() => createFloatingEffect("❤️", 24, 4), 800);
 setInterval(() => createFloatingEffect("⭐", 18, 5), 1200);
 
-// Gül yaprağı animasyon fonksiyonu (yeni eklenen)
+// Gül yaprağı animasyon fonksiyonu
 function createRosePetal() {
   const petal = document.createElement("div");
   petal.innerText = "🌹";
@@ -62,3 +62,18 @@ function createRosePetal() {
 
 // Her 1.5 saniyede bir gül yaprağı oluştur
 setInterval(createRosePetal, 1500);
+
+// Video oynatma işlevi
+const birthdayVideo = document.getElementById('birthday-video');
+const playButton = document.getElementById('play-video-button');
+
+if (playButton && birthdayVideo) {
+  playButton.addEventListener('click', () => {
+    // Videonun sesini aç
+    birthdayVideo.muted = false;
+    // Videoyu başlat
+    birthdayVideo.play();
+    // Butonu gizle
+    playButton.style.display = 'none';
+  });
+}
