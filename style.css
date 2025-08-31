@@ -118,7 +118,7 @@ button:hover {
 
 .birthday-card h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: 5rem; /* Font büyüklüğünü artırdım */
+  font-size: 6rem; /* Font büyüklüğünü artırdım */
   color: #ff3366;
   text-shadow: 3px 3px 5px rgba(0,0,0,0.15); /* Gölgeyi belirginleştirdim */
   margin-top: 0;
@@ -127,7 +127,7 @@ button:hover {
 
 .birthday-card p {
   font-family: 'Dancing Script', cursive;
-  font-size: 2.5rem; /* Font büyüklüğünü artırdım */
+  font-size: 3rem; /* Font büyüklüğünü artırdım */
   color: #444;
   margin-top: 0;
   margin-bottom: 0;
