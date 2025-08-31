@@ -163,7 +163,8 @@ button:hover {
 
 /* Ortadaki mesaj kutusu stilini parlat */
 .center-message {
-  margin: 0 auto; /* Bu satırı değiştirdik */
+  margin: 0 auto;
+  font-family: 'Dancing Script', cursive; /* Yazı fontunu Dancing Script olarak değiştirdim */
   font-size: 26px;
   font-weight: bold;
   color: #ff1a8c;
