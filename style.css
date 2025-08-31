@@ -6,8 +6,6 @@ body {
   overflow-x: hidden;
   position: relative;
   height: 100vh;
-  
-  /* Yeni arka plan animasyonu */
   background: linear-gradient(-45deg, #ff99cc, #ffccff, #ffe0f0, #ffcce6);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
@@ -176,7 +174,7 @@ button:hover {
 /* Ortadaki mesaj kutusu stilini parlat */
 .center-message {
   margin: 0 auto;
-  font-family: 'Dancing Script', cursive; /* Yazı fontunu Dancing Script olarak değiştirdim */
+  font-family: 'Dancing Script', cursive;
   font-size: 26px;
   font-weight: bold;
   color: #ff1a8c;
@@ -185,6 +183,7 @@ button:hover {
   text-shadow: 0 0 8px #fff, 0 0 15px #ff66aa;
   animation: glow 2s infinite alternate;
 }
+
 @keyframes glow {
   0% {
     text-shadow: 0 0 5px #fff, 0 0 10px #ff66aa;
@@ -209,6 +208,7 @@ button:hover {
   flex-direction: column;
   gap: 20px;
 }
+
 .side img {
   width: 180px;
   height: auto;
@@ -219,9 +219,11 @@ button:hover {
   border: 4px solid white;
   background: white;
 }
+
 .side.right img {
   transform: rotate(5deg);
 }
+
 /* Hover efekti */
 .side img:hover {
   transform: scale(1.05) rotate(0deg);
@@ -233,12 +235,14 @@ button:hover {
   flex: 1;
   text-align: center;
 }
+
 .center h1 {
   font-family: 'Great Vibes', cursive;
   font-size: 48px;
   color: #ff3366;
   margin-bottom: 20px;
 }
+
 .center p {
   font-family: 'Dancing Script', cursive;
   font-size: 24px;
