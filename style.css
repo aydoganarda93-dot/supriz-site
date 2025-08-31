@@ -96,26 +96,38 @@ button:hover {
 }
 
 .birthday-card {
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 15px;
-  backdrop-filter: blur(5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 40px; /* Padding'i büyüttüm */
+  background-color: rgba(255, 255, 255, 0.85); /* Opaklığı artırdım */
+  border-radius: 20px; /* Köşeleri yuvarladım */
+  backdrop-filter: blur(8px); /* Bulanıklığı artırdım */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Gölgeyi belirginleştirdim */
   margin-bottom: 20px;
+  animation: fadeInDown 1.5s ease-in-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .birthday-card h1 {
   font-family: 'Great Vibes', cursive;
-  font-size: 4rem;
+  font-size: 5rem; /* Font büyüklüğünü artırdım */
   color: #ff3366;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  text-shadow: 3px 3px 5px rgba(0,0,0,0.15); /* Gölgeyi belirginleştirdim */
   margin-top: 0;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .birthday-card p {
   font-family: 'Dancing Script', cursive;
-  font-size: 2rem;
+  font-size: 2.5rem; /* Font büyüklüğünü artırdım */
   color: #444;
   margin-top: 0;
   margin-bottom: 0;
