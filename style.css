@@ -278,7 +278,7 @@ button:hover {
 /* Hover efekti */
 .side img:hover {
   transform: scale(1.05) rotate(0deg);
-  box-shadow: 15px 25px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.7);
 }
 
 /* Ortadaki yazı */
@@ -334,4 +334,26 @@ button:hover {
   margin-top: 20px;
   max-width: 600px;
   line-height: 1.5;
+}
+
+/* Mobil cihazlar için eklenen medya sorgusu */
+@media (max-width: 768px) {
+  .birthday-card h1 {
+    font-size: 4rem; /* H1 başlığını küçültme */
+  }
+
+  .birthday-card p {
+    font-size: 2rem; /* P etiketini küçültme */
+  }
+
+  .container {
+    flex-direction: column; /* Mobil ekranlarda yan yana yerine alt alta sırala */
+    gap: 30px;
+  }
+  
+  .side {
+    flex-direction: row; /* Fotoğrafları alt alta sırala */
+    justify-content: center;
+    flex-wrap: wrap; /* Fotoğrafların yan yana sığmasını sağla */
+  }
 }
