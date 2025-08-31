@@ -1,14 +1,39 @@
+// JavaScript for the surprise page
+
+// Get all necessary elements from the DOM
+const playButton = document.getElementById('play-video-button');
+const birthdayVideo = document.getElementById('birthday-video');
+const effectsContainer = document.getElementById('effects');
+const centerMessage = document.querySelector('.center-message');
+
+const sozlerDiv = document.getElementById("sozler");
+
+// Array of messages to display
 const messages = [
   "Sen benim en güzel tesadüfümsün 🌸",
   "Hayatıma anlam katan en değerli şey sensin 💫",
   "Sonsuza kadar sen ❤️"
 ];
+
+// Function to handle the video playback when the button is clicked
+if (playButton && birthdayVideo) {
+  playButton.addEventListener('click', () => {
+    // Unmute the video
+    birthdayVideo.muted = false;
+    // Play the video
+    birthdayVideo.play();
+    // Hide the button
+    playButton.style.display = 'none';
+  });
+}
+
+// Function to show a random message at a random time
 let index = 0;
-const sozlerDiv = document.getElementById("sozler");
 setInterval(() => {
   index = (index + 1) % messages.length;
   sozlerDiv.innerText = messages[index];
 }, 4000);
+
 
 // Kalp ve yıldız animasyonları için tek fonksiyon
 const effects = document.getElementById("effects");
@@ -63,17 +88,25 @@ function createRosePetal() {
 // Her 1.5 saniyede bir gül yaprağı oluştur
 setInterval(createRosePetal, 1500);
 
-// Video oynatma işlevi
-const birthdayVideo = document.getElementById('birthday-video');
-const playButton = document.getElementById('play-video-button');
+// Function to create and animate shooting stars
+function createShootingStar() {
+  const star = document.createElement('div');
+  star.className = 'shooting-star';
+  const startX = Math.random() * window.innerWidth;
+  const startY = Math.random() * window.innerHeight * 0.5; // Starts in the upper half
+  star.style.left = `${startX}px`;
+  star.style.top = `${startY}px`;
+  
+  // Set a random delay for the animation
+  star.style.animationDelay = `${Math.random() * 5}s`;
 
-if (playButton && birthdayVideo) {
-  playButton.addEventListener('click', () => {
-    // Videonun sesini aç
-    birthdayVideo.muted = false;
-    // Videoyu başlat
-    birthdayVideo.play();
-    // Butonu gizle
-    playButton.style.display = 'none';
+  document.body.appendChild(star);
+  
+  // Remove the star element after its animation is complete
+  star.addEventListener('animationend', () => {
+    star.remove();
   });
 }
+
+// Create shooting stars at regular intervals
+setInterval(createShootingStar, 3000);
